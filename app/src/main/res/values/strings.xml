@@ -2,4 +2,7 @@
     <string name="app_name">hw3_0415</string>
     <string name="woodwinds">Woodwinds</string>
     <string name="brass">Brass</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 </resources>

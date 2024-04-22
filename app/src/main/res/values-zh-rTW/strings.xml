@@ -2,4 +2,7 @@
     <string name="app_name">hw3_0415</string>
     <string name="woodwinds">木管樂器</string>
     <string name="brass">銅管樂器</string>
+    <string name="play">播放</string>
+    <string name="pause">暫停</string>
+    <string name="stop">停止</string>
 </resources>
