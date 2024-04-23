@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -54,29 +55,41 @@ class MusicPlayer : ComponentActivity(){
             var playText = remember{mutableStateOf(this@MusicPlayer.getString(R.string.play))}
 
             Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
             )
             {
-                Image(painter = painterResource(id = imgResourceId), contentDescription = " ")
-            }
-            Button(onClick = {
-                if(notPlay.value){
-                    playerStart()
-                    playText.value = getString(R.string.pause)
-                    notPlay.value = false
-                }
-                else
+                Image(painter = painterResource(id = imgResourceId),
+                    contentDescription = " ",
+                    contentScale = ContentScale.Inside,
+                    modifier = Modifier
+                        .requiredSize(width = 200.dp, height = 200.dp))
+
+                Row()
                 {
-                    playerPause()
-                    playText.value = getString(R.string.play)
-                    notPlay.value = true
+                    Button(onClick = {
+                        if(notPlay.value){
+                            playerStart()
+                            playText.value = getString(R.string.pause)
+                            notPlay.value = false
+                        }
+                        else
+                        {
+                            playerPause()
+                            playText.value = getString(R.string.play)
+                            notPlay.value = true
+                        }
+                    })
+                    {
+                        Text(text = playText.value)
+                    }
+                    Button(onClick = {playerStop()}){
+                        Text(text = stringResource(id = R.string.stop))
+                    }
                 }
-            })
-            {
-                Text(text = playText.value)
+
             }
-            Button(onClick = {playerStop()}){
-                Text(text = stringResource(id = R.string.stop))
-            }
+
         }
 
     }

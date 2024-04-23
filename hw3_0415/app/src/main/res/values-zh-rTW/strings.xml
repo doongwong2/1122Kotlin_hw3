@@ -6,6 +6,19 @@
     <string name="pause">暫停</string>
     <string name="stop">停止</string>
     <string name="music_player">MusicPlayer</string>
+    <string name="clarinet_bassclarinet">單簧管與低音單簧管</string>
+    <string name="flute_piccolo">長笛與短笛</string>
+    <string name="oboe_bassoon">雙簧管與低音管</string>
+    <string name="alto_saxophone">中音薩克斯風</string>
+    <string name="tenor_saxophone">次中音薩克斯風</string>
+    <string name="baritone_saxophone">低音薩克斯風</string>
+    <string name="trumpet">小號</string>
+    <string name="trombone">長號</string>
+    <string name="french_horn">法國號</string>
+    <string name="euphonium">上低音號</string>
+    <string name="tuba">低音號</string>
+    <string name="contrabass">低音大提琴</string>
+    <string name="percussion">敲擊樂</string>
 
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

@@ -5,6 +5,21 @@
     <string name="play">Play</string>
     <string name="pause">Pause</string>
     <string name="stop">Stop</string>
+    <string name="clarinet_bassclarinet">Clarinet and Bass Clarinet</string>
+    <string name="flute_piccolo">Flute and Piccolo</string>
+    <string name="oboe_bassoon">Oboe and Bassoon</string>
+    <string name="alto_saxophone">Alto Saxophone</string>
+    <string name="tenor_saxophone">Tenor Saxophone</string>
+    <string name="baritone_saxophone">Baritone Saxophone</string>
+    <string name="trumpet">Trumpet</string>
+    <string name="trombone">Trombone</string>
+    <string name="french_horn">French Horn</string>
+    <string name="euphonium">Euphonium</string>
+    <string name="tuba">tuba</string>
+    <string name="contrabass">Contrabass</string>
+    <string name="percussion">Percussion</string>
+
+
     <string name="music_player">MusicPlayer</string>
 
     <string name="first_fragment_label">First Fragment</string>
