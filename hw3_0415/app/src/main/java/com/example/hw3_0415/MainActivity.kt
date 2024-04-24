@@ -51,25 +51,26 @@ fun showImages(context : Context)
     val imageAmt = ArrayList<Int>()
     val imageStr = ArrayList<Int>()
     val mp3list = ArrayList<Int>()
-    
-    imageAmt.add(R.drawable.clarinet_bassclarinet)
-    imageAmt.add(R.drawable.oboe_bassoon)
-    imageAmt.add(R.drawable.flute_piccolo)
-    imageAmt.add(R.drawable.trumpet)
-    imageAmt.add(R.drawable.tuba)
-    imageAmt.add(R.drawable.clarinet_bassclarinet)
-    imageAmt.add(R.drawable.oboe_bassoon)
-    imageAmt.add(R.drawable.flute_piccolo)
-    imageAmt.add(R.drawable.trumpet)
-    imageAmt.add(R.drawable.tuba)
-    imageAmt.add(R.drawable.clarinet_bassclarinet)
-    imageAmt.add(R.drawable.oboe_bassoon)
-    imageAmt.add(R.drawable.flute_piccolo)
 
-    
+    //handles image display
+    imageAmt.add(R.drawable.clarinet_bassclarinet)
+    imageAmt.add(R.drawable.oboe_bassoon)
+    imageAmt.add(R.drawable.flute_piccolo)
+    imageAmt.add(R.drawable.alto_saxophone)
+    imageAmt.add(R.drawable.tenor_saxophone)
+    imageAmt.add(R.drawable.baritone_saxophone)
+    imageAmt.add(R.drawable.trumpet)
+    imageAmt.add(R.drawable.trombone)
+    imageAmt.add(R.drawable.french_horn)
+    imageAmt.add(R.drawable.euphonium)
+    imageAmt.add(R.drawable.tuba)
+    imageAmt.add(R.drawable.contrabass)
+    imageAmt.add(R.drawable.percussion)
+
+    //handles name display
     imageStr.add(R.string.clarinet_bassclarinet)
-    imageStr.add(R.string.flute_piccolo)
     imageStr.add(R.string.oboe_bassoon)
+    imageStr.add(R.string.flute_piccolo)
     imageStr.add(R.string.alto_saxophone)
     imageStr.add(R.string.tenor_saxophone)
     imageStr.add(R.string.baritone_saxophone)
@@ -81,10 +82,10 @@ fun showImages(context : Context)
     imageStr.add(R.string.contrabass)
     imageStr.add(R.string.percussion)
 
-
+    //handles mp3 names
     mp3list.add(R.raw.clarinet_basscl)
-    mp3list.add(R.raw.flute_picc)
     mp3list.add(R.raw.oboe_bsn)
+    mp3list.add(R.raw.flute_picc)
     mp3list.add(R.raw.alto_sax)
     mp3list.add(R.raw.tenor_sax)
     mp3list.add(R.raw.bari_sax)
@@ -101,13 +102,13 @@ fun showImages(context : Context)
 
         items(imageAmt){
                 item ->
-            Row()
+            Row(verticalAlignment = Alignment.CenterVertically)
             {
                 Image(painter = painterResource(id = item),
                     contentDescription = stringResource(id = item),
                     contentScale = ContentScale.Inside,
                     modifier = Modifier
-                        .requiredSize(width = 100.dp, height = 100.dp))
+                        .requiredSize(width = 135.dp, height = 75.dp))
 
                 Button(onClick = {
                     val intent = Intent()
@@ -121,7 +122,7 @@ fun showImages(context : Context)
 
                 })
                 {
-                    Text(text = "click to play " + stringResource(id = imageStr[imageAmt.indexOf(item)]))
+                    Text(text = "play " + stringResource(id = imageStr[imageAmt.indexOf(item)]))
                 }
 
             }

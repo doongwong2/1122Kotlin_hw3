@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
@@ -54,16 +55,14 @@ class MusicPlayer : ComponentActivity(){
             var notPlay = remember{mutableStateOf(true)}
             var playText = remember{mutableStateOf(this@MusicPlayer.getString(R.string.play))}
 
-            Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
+            Column( horizontalAlignment = Alignment.CenterHorizontally
             )
             {
                 Image(painter = painterResource(id = imgResourceId),
                     contentDescription = " ",
                     contentScale = ContentScale.Inside,
                     modifier = Modifier
-                        .requiredSize(width = 200.dp, height = 200.dp))
+                        .fillMaxWidth())
 
                 Row()
                 {
