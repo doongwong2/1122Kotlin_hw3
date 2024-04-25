@@ -18,6 +18,10 @@
     <string name="tuba">Tuba</string>
     <string name="contrabass">Contrabass</string>
     <string name="percussion">Percussion</string>
+    <string name="metadata">Some Metadata</string>
+    <string name="name">Name</string>
+    <string name="duration">Music Duration</string>
+    <string name="genre">Music Genre</string>
 
 
     <string name="music_player">MusicPlayer</string>

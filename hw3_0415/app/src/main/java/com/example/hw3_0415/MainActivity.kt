@@ -2,7 +2,10 @@ package com.example.hw3_0415
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaMetadataRetriever
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -28,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType.Companion.Uri
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.startActivity
@@ -118,6 +122,7 @@ fun showImages(context : Context)
                     )
                     intent.putExtra("IMG",imageAmt.getOrNull(imageAmt.indexOf(item)))
                     intent.putExtra("MUS",mp3list.getOrNull(imageAmt.indexOf(item)))
+                    intent.putExtra("NAME",imageStr.getOrNull(imageAmt.indexOf(item)))
                     context.startActivity(intent)
 
                 })

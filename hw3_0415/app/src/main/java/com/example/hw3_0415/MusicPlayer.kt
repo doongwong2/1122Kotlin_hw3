@@ -2,9 +2,12 @@ package com.example.hw3_0415
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaMetadata
+import android.media.MediaMetadataRetriever
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Media
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -32,6 +35,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -47,6 +51,7 @@ class MusicPlayer : ComponentActivity(){
         val intent = intent
         val imgResourceId = intent.getIntExtra("IMG",0)
         val musResourceId = intent.getIntExtra("MUS",0)
+        val nameResourceId = intent.getIntExtra("NAME",0)
 
         init(this@MusicPlayer, musResourceId)
 
@@ -64,6 +69,8 @@ class MusicPlayer : ComponentActivity(){
                     modifier = Modifier
                         .fillMaxWidth())
 
+                Text(text = stringResource(id = nameResourceId), fontSize = 20.sp)
+                
                 Row()
                 {
                     Button(onClick = {
@@ -86,6 +93,10 @@ class MusicPlayer : ComponentActivity(){
                         Text(text = stringResource(id = R.string.stop))
                     }
                 }
+                //Text(text = stringResource(id = R.string.metadata), fontSize = 20.sp, color = Color.Cyan)
+                //Text(text = stringResource(id = R.string.name)+ "${title}", fontSize = 20.sp, color = Color.Cyan)
+                //Text(text = stringResource(id = R.string.duration)+ "${duration}", fontSize = 20.sp, color = Color.Cyan)
+                //Text(text = stringResource(id = R.string.genre)+ "${genre}", fontSize = 20.sp, color = Color.Cyan)
 
             }
 

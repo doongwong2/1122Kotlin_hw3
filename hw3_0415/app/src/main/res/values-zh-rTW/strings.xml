@@ -19,6 +19,10 @@
     <string name="tuba">低音號</string>
     <string name="contrabass">低音大提琴</string>
     <string name="percussion">敲擊樂</string>
+    <string name="metadata">數據</string>
+    <string name="name">曲子名字</string>
+    <string name="duration">曲子時長</string>
+    <string name="genre">曲子類型</string>
 
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
